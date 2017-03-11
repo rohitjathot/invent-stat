@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script type="text/javascript" src="script_1.js"></script>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<body>
+
+
+
+<!-- Nav -->
+<nav class="w3-bar w3-black">
+  <a href="#home" class="w3-button w3-bar-item">Home</a>
+  <button onclick="myFunction()" class="w3-button w3-bar-item">Employee</button>
+		  <div id="myDropdown" class="dropdown-content">
+		    <a href="#home">Add</a>
+		    <a href="#about">Update</a>
+		    <a href="#contact">View</a>
+		  </div>
+  <a href="#link" class="w3-button w3-bar-item">Option</a>
+  <a href="#link" class="w3-button w3-bar-item">Option</a>
+</nav>
+
+
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="pics/book_1.jpg"
+  style="width:100%">
+  <img class="mySlides" src="pics/book_2.jpg"
+  style="width:100%">
+  <img class="mySlides" src="pics/book_3.jpg"
+  style="width:100%">
+</section>
+
+
+
+
+
+<script>
+  
+  var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+
+
+</script>
+
+
+
+</body>
+</html>
